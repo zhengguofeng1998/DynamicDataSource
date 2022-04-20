@@ -4,3 +4,6 @@
 *.class
 */target
 */target/*
+/FirstDemo/target
+/SecondDemo/target
+/ThirdDemo/target
