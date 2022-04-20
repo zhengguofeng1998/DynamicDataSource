@@ -1,7 +1,7 @@
 package com.zgf.springcloud.service.slave.impl;
 
+import com.zgf.springcloud.annotation.DS;
 import com.zgf.springcloud.domain.slave.StorageDO;
-import com.zgf.springcloud.holder.DynamicDataSourceContextHolder;
 import com.zgf.springcloud.mapper.slave.StorageDao;
 import com.zgf.springcloud.service.slave.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +19,9 @@ public class StorageServiceImpl implements StorageService {
     private StorageDao storageDao;
 
     @Override
+    @DS(value = "storage")
     public StorageDO getStorageById(Long id) {
-        DynamicDataSourceContextHolder.setContextKey("storage");
         StorageDO storageById = storageDao.getStorageById(id);
-        DynamicDataSourceContextHolder.removeContextKey();
         return storageById;
     }
 }
