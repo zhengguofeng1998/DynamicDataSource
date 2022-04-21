@@ -4,12 +4,15 @@ package com.zgf.springcloud.service.primary.impl;
 import com.zgf.springcloud.annotation.DS;
 import com.zgf.springcloud.config.DynamicDataSource;
 import com.zgf.springcloud.constants.DataSourceConstants;
+import com.zgf.springcloud.domain.GroupByVo;
 import com.zgf.springcloud.domain.primary.AccountDO;
 import com.zgf.springcloud.mapper.primary.AccountDao;
 import com.zgf.springcloud.service.primary.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * @program: testSeata
@@ -27,6 +30,13 @@ public class AccountServiceImpl implements AccountService {
     public AccountDO getAccountById(Long id) {
         AccountDO all = accountDao.getAccountById(id);
         return all;
+    }
+
+    @Override
+    @DS(DataSourceConstants.DS_KEY_PRIMARY)
+    public List<GroupByVo> queryByGroup() {
+        List<GroupByVo> groupByVos = accountDao.queryByGroup();
+        return groupByVos;
     }
 
     @Override

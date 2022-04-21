@@ -15,4 +15,28 @@
     <update id="updateById">
         update t_account set total = #{total},used = #{used},residue = #{residue} where id = #{id}
     </update>
+
+    <resultMap id="queryByGroupVO" type="com.zgf.springcloud.domain.GroupByVo">
+        <id property="userId" column="user_id"></id>
+        <collection property="subVo" ofType="com.zgf.springcloud.domain.SubVo">
+            <result property="id" column="id"></result>
+            <collection property="subSubVos" ofType="com.zgf.springcloud.domain.SubSubVo">
+                <result property="total" column="total"></result>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="queryByGroup" resultMap="queryByGroupVO">
+       SELECT
+        user_id,
+        id,
+        total
+      FROM
+	    t_account
+      GROUP BY
+        user_id,
+        id,
+        total;
+    </select>
+
 </mapper>

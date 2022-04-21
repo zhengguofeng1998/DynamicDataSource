@@ -1,10 +1,13 @@
 package com.zgf.springcloud.controller.primary;
 
 import com.zgf.springcloud.config.DynamicDataSource;
+import com.zgf.springcloud.domain.GroupByVo;
 import com.zgf.springcloud.domain.primary.AccountDO;
 import com.zgf.springcloud.service.primary.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @program: DynamicDataSource
@@ -22,6 +25,12 @@ public class AccountController {
     public AccountDO getAccountById(@PathVariable("id") Long id) {
         AccountDO allAccount = accountService.getAccountById(id);
         return allAccount;
+    }
+
+    @GetMapping("/queryByGroup")
+    public List<GroupByVo> queryByGroup() {
+        List<GroupByVo> groupByVos = accountService.queryByGroup();
+        return groupByVos;
     }
 
     @PostMapping(value = "/updateById")

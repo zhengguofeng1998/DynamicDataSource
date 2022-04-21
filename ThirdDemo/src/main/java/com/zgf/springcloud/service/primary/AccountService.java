@@ -1,6 +1,11 @@
 package com.zgf.springcloud.service.primary;
 
+import com.zgf.springcloud.annotation.DS;
+import com.zgf.springcloud.constants.DataSourceConstants;
+import com.zgf.springcloud.domain.GroupByVo;
 import com.zgf.springcloud.domain.primary.AccountDO;
+
+import java.util.List;
 
 /**
  * @program: DynamicDataSource
@@ -10,6 +15,8 @@ import com.zgf.springcloud.domain.primary.AccountDO;
  **/
 public interface AccountService {
     AccountDO getAccountById(Long id);
+
+    List<GroupByVo> queryByGroup();
 
     String updateById(AccountDO accountDO);
 
