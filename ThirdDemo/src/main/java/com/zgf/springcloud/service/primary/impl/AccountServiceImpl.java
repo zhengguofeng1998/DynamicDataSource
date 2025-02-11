@@ -2,7 +2,6 @@ package com.zgf.springcloud.service.primary.impl;
 
 
 import com.zgf.springcloud.annotation.DS;
-import com.zgf.springcloud.config.DynamicDataSource;
 import com.zgf.springcloud.constants.DataSourceConstants;
 import com.zgf.springcloud.domain.GroupByVo;
 import com.zgf.springcloud.domain.primary.AccountDO;

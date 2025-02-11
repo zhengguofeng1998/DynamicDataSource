@@ -1,6 +1,5 @@
 package com.zgf.springcloud.controller.primary;
 
-import com.zgf.springcloud.config.DynamicDataSource;
 import com.zgf.springcloud.domain.GroupByVo;
 import com.zgf.springcloud.domain.primary.AccountDO;
 import com.zgf.springcloud.service.primary.AccountService;

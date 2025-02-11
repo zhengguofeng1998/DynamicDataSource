@@ -41,7 +41,7 @@ public class DynamicDataSourceConfig {
         druidDataSource.setTestWhileIdle(true);
         druidDataSource.setTimeBetweenEvictionRunsMillis(60000);
         druidDataSource.setMinEvictableIdleTimeMillis(25200000);
-        druidDataSource.setRemoveAbandoned(true);
+        druidDataSource.setRemoveAbandoned(false);
         druidDataSource.setRemoveAbandonedTimeout(1800);
         druidDataSource.setLogAbandoned(true);
         return druidDataSource;

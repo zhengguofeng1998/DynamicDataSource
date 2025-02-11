@@ -43,7 +43,7 @@ public class AddDataSourceController {
         druidDataSource.setDriverClassName(driverClassName);
         druidDataSource = DynamicDataSourceConfig.dataSource(druidDataSource);
         myTargetDataSources.put("storage", druidDataSource);
-        dynamicDataSource.setTargetDataSources(myTargetDataSources);
+        // dynamicDataSource.setTargetDataSources(myTargetDataSources);
         dynamicDataSource.afterPropertiesSet();
         return "添加数据源成功";
     }

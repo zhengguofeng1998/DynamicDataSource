@@ -20,3 +20,4 @@ mybatis-plus:
   type-aliases-package: com.zgf.springcloud.domain
   # 默认位置，可不配置
 #  mapper-locations: classpath*:/mapper/**/*.xml
+# deepseek生成的key需要记录:sk-0db0fb10738241e284b5b07baafe5c1c

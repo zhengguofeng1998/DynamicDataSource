@@ -3,7 +3,6 @@ package com.zgf.springcloud.service.slave.impl;
 import com.zgf.springcloud.annotation.DS;
 import com.zgf.springcloud.constants.DataSourceConstants;
 import com.zgf.springcloud.domain.slave.OrderDO;
-import com.zgf.springcloud.holder.DynamicDataSourceContextHolder;
 import com.zgf.springcloud.mapper.slave.OrderDao;
 import com.zgf.springcloud.service.slave.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;

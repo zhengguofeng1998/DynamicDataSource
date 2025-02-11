@@ -26,15 +26,15 @@ public class AccountDO {
     /**
      * 总额度
      */
-    private BigDecimal total;
+    private Integer total;
 
     /**
      * 已用额度
      */
-    private BigDecimal used;
+    private Integer used;
 
     /**
      * 剩余额度
      */
-    private BigDecimal residue;
+    private Integer residue;
 }
