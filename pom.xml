@@ -89,4 +89,13 @@
     </dependencyManagement>
 
 
+    <!--通用依赖-->
+    <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.27</version>
+        </dependency>
+    </dependencies>
+
 </project>
